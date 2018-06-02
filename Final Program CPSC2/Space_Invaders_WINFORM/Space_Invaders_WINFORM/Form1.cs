@@ -25,9 +25,9 @@ namespace Space_Invaders_WINFORM
 
         int timerCount = 0;
 
-        int weakEnemySpeed = 7;
+        double weakEnemySpeed = 7;
 
-        int bigBoiSpeed = 15;
+        double bigBoiSpeed = 15;
 
         const string fileName = "NewHighScoreFile.txt";
 
@@ -122,11 +122,11 @@ namespace Space_Invaders_WINFORM
 
                     if (x.Tag.ToString() == "invaders")
                     {
-                        ((PictureBox)x).Left += weakEnemySpeed; // - move left 
+                        ((PictureBox)x).Left += (int)weakEnemySpeed; // - move left 
                     }
                     else
                     {
-                        ((PictureBox)x).Left += bigBoiSpeed;
+                        ((PictureBox)x).Left += (int)bigBoiSpeed;
                     }
 
                     if (((PictureBox)x).Left > 650) //if reaches the end of screen
@@ -189,10 +189,10 @@ namespace Space_Invaders_WINFORM
                     makeAdvancedEnemy();
                 }
             }
-            if (score > 20000 || score > 40000 ||)
+            if (timerCount % 100 == 0)
             {
-                weakEnemySpeed += 2;
-                bigBoiSpeed += 1;
+                weakEnemySpeed += 0.5;
+                bigBoiSpeed += 0.2;
             }
             timerCount++;
         }

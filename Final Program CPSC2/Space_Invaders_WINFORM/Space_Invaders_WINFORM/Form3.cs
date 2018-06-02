@@ -55,13 +55,19 @@ namespace Space_Invaders_WINFORM
         }
         #endregion
 
+        private void Form3_KeyDown(object sender, KeyEventArgs e) //que?
+        {
+            if (e.KeyCode == Keys.Left)
+            {
+                MessageBox.Show("sup");
+            }
+        }
         private void label2_Click_1(object sender, EventArgs e)
         {
-            label2.Text = "Press Enter to Exit";
+            label2.Text = "Thanks for Playing!";
             label1.Visible = false;
 
             timer1.Start();
-
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
@@ -89,20 +95,15 @@ namespace Space_Invaders_WINFORM
             {
                 //Disable the timer
                 timer1.Enabled = false;
+                
+                this.Close();
             }
+            
         }
 
         private void keyPressed(object sender, KeyPressEventArgs e)
         {
             
-        }
-
-        private void Form3_KeyDown(object sender, KeyEventArgs e) //que?
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                MessageBox.Show("sup");
-            }
         }
     }
 }

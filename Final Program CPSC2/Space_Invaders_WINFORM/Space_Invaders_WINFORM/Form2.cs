@@ -24,7 +24,6 @@ namespace Space_Invaders_WINFORM
 
         private void Form2_Load(object sender, EventArgs e)
         {
-           
             if (File.Exists(fileName))
             {
                 try
@@ -48,7 +47,7 @@ namespace Space_Invaders_WINFORM
         {
             if (e.KeyCode == Keys.Enter)
             {
-                pictureBox1_Click(sender, e);
+                pictureBox1_Click(sender, e); //if they press enter, go click the box
             }
         }
 
